@@ -1,0 +1,9 @@
+CassandraCSharpDriver
+Docker.DotNet
+Microsoft.Data.SqlClient
+Microsoft.NET.Test.Sdk
+MySqlConnector
+Npgsql
+Stub.System.Data.SQLite.Core.NetStandard
+xunit
+xunit.runner.visualstudio

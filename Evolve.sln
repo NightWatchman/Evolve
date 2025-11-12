@@ -1,8 +1,13 @@
-
+﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29424.173
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{9CF079C9-5DA6-4A04-B22F-47EA400AA335}"
+	ProjectSection(SolutionItems) = preProject
+		paket.dependencies = paket.dependencies
+	EndProjectSection
+EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Evolve", "src\Evolve\Evolve.csproj", "{DBF0F8FA-5FD6-442A-BD36-925E38319E42}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Evolve.Cli", "src\Evolve.Cli\Evolve.Cli.csproj", "{7DF2B02C-A19B-45F9-9C4A-D4C748EE8314}"

@@ -1,0 +1,6 @@
+CassandraCSharpDriver
+McMaster.Extensions.CommandLineUtils
+Microsoft.Data.SqlClient
+MySqlConnector
+Npgsql
+Stub.System.Data.SQLite.Core.NetStandard

@@ -1,6 +1,6 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
   <Import Project="..\..\build\common.props" />
-
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFrameworks>net9.0</TargetFrameworks>
@@ -8,7 +8,6 @@
     <ToolCommandName>evolve</ToolCommandName>
     <RootNamespace>EvolveDb.Tool</RootNamespace>
   </PropertyGroup>
-
   <PropertyGroup>
     <PackageId>Evolve.Tool</PackageId>
     <Title>Database migration tool for .NET. Inspired by Flyway.</Title>
@@ -26,23 +25,12 @@ Every time you build your project, it will automatically ensure that your databa
       - Remove support for netstandard2.0
     </PackageReleaseNotes>
   </PropertyGroup>
-
   <ItemGroup>
     <Compile Include="..\Evolve.Cli\EvolveFactory.cs" Link="EvolveFactory.cs" />
     <Compile Include="..\Evolve.Cli\Program.cs" Link="Program.cs" />
   </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="CassandraCSharpDriver" Version="3.20.0" />
-    <PackageReference Include="McMaster.Extensions.CommandLineUtils" Version="3.1.0" />
-    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.5" />
-    <PackageReference Include="MySqlConnector" Version="2.3.5" />
-    <PackageReference Include="Npgsql" Version="9.0.3" />
-    <PackageReference Include="Stub.System.Data.SQLite.Core.NetStandard" Version="1.0.118" />
-  </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\Evolve\Evolve.csproj" />
   </ItemGroup>
-
+  <Import Project="..\..\.paket\Paket.Restore.targets" />
 </Project>

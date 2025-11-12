@@ -1,32 +1,15 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
     <IsPackable>false</IsPackable>
     <LangVersion>latest</LangVersion>
     <RootNamespace>EvolveDb.Tests</RootNamespace>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="altcover" Version="8.6.125" />
-    <PackageReference Include="CassandraCSharpDriver" Version="3.20.0" />
-    <PackageReference Include="Docker.DotNet" Version="3.125.15" />
-    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.5" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
-    <PackageReference Include="MySqlConnector" Version="2.3.5" />
-    <PackageReference Include="Npgsql" Version="9.0.3" />
-    <PackageReference Include="Stub.System.Data.SQLite.Core.NetStandard" Version="1.0.118" />
-    <PackageReference Include="xunit" Version="2.9.3" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="3.1.5">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
-    </PackageReference>
-  </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\..\src\Evolve\Evolve.csproj" />
   </ItemGroup>
-
   <ItemGroup>
     <Content Include="Integration\**\*.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -38,14 +21,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-
   <ItemGroup>
     <Content Remove="Integration\MySQL\Resources\Sql_Scripts\Migration\*.sql" />
     <EmbeddedResource Include="Integration\MySQL\Resources\Sql_Scripts\Migration\**\*.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
-
   <ItemGroup>
     <Content Include="Resources\Configuration\Web.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -69,11 +50,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-
   <ItemGroup>
     <None Update="_evolve.cassandra.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-
+  <Import Project="..\..\.paket\Paket.Restore.targets" />
 </Project>
