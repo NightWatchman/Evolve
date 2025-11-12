@@ -4,7 +4,7 @@ nuget CassandraCSharpDriver ~> 3
 nuget Docker.DotNet 3.125.15
 nuget McMaster.Extensions.CommandLineUtils 3.1.0
 nuget Microsoft.Data.SqlClient 5.1.5
-nuget Microsoft.Data.Sqlite 3.1.1
+nuget Microsoft.Data.Sqlite ~> 10
 nuget Microsoft.NET.Test.Sdk ~> 18
 nuget MySqlConnector ~> 2
 nuget Newtonsoft.Json ~> 13
